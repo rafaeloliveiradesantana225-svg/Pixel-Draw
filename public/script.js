@@ -8,7 +8,7 @@ const statusEl = document.getElementById("status");
 const canvas = document.getElementById("preview");
 const ctx = canvas.getContext("2d");
 const output = document.getElementById("output");
-const form = document.getElementById("form");
+const form = document.getElementById("drawform");
 
 let lastPixels = null;
 
