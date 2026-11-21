@@ -1,0 +1,38 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Draw</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Pixel Draw</h1>
+    <p class="subtitle">Transforme qualquer imagem pública em uma matriz RGB.</p>
+
+    <form id="drawForm">
+      <label for="imageUrl">URL da imagem</label>
+      <input id="imageUrl" type="url" placeholder="https://exemplo.com/imagem.png" required>
+      <div class="sizes">
+        <div>
+          <label for="width">Largura</label>
+          <input id="width" type="number" min="1" max="160" value="120" required>
+        </div>
+        <div>
+          <label for="height">Altura</label>
+          <input id="height" type="number" min="1" max="160" value="120" required>
+        </div>
+      </div>
+      <button id="drawButton" type="submit">Draw</button>
+    </form>
+
+    <p id="status" role="status" aria-live="polite">API pronta para uso.</p>
+    <div class="preview-wrap">
+      <canvas id="preview" width="480" height="480" aria-label="Prévia pixelada"></canvas>
+    </div>
+    <button id="copyButton" class="secondary" type="button" disabled>Copiar matriz RGB</button>
+    <pre id="output" aria-label="Resultado RGB"></pre>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
